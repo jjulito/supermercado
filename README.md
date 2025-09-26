@@ -40,7 +40,7 @@ Consume el backend alojado en Render para mostrar datos dinámicos de productos.
 
 ### 🎯 Objetivo del Proyecto
 
-Este repositorio demuestra habilidades en:
+Este repositorio fue hecho con la intención de mostrar mis habilidades en:
 - Creación de una aplicación web full-stack.
 - Implementación de un backend personalizado consumiendo APIs externas.
 - Deploy independiente del frontend y backend usando **GitHub Pages** y **Render**.
@@ -68,6 +68,3 @@ It fetches data from the public API [DummyJSON](https://dummyjson.com/products) 
 |------------------------------------------|-------------------------------------------------|
 | `/products`                             | Returns all products from DummyJSON.          |
 | `/products/category/:category`          | Returns products filtered by category.        |
-
-
-📌 **URL del backend:**  
