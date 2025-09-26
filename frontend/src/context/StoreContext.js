@@ -19,6 +19,22 @@ export const StoreProvider = ({ children }) => {
     });
   };
 
+   const decreaseQuantity = (productId) => {
+    setCart((prevCart) => {
+      const index = prevCart.findIndex(item => item.id === productId);
+      if (index !== -1) {
+        const updatedCart = [...prevCart];
+        if (updatedCart[index].quantity > 1) {
+          updatedCart[index].quantity -= 1;
+        } else {
+          return updatedCart.filter(item => item.id !== productId);
+        }
+        return updatedCart;
+      }
+      return prevCart;
+    });
+  };
+
   const logout = () => {
     setUser(null);
     setCart([]);
@@ -34,6 +50,8 @@ export const StoreProvider = ({ children }) => {
     <StoreContext.Provider value={{
       cart,
       addToCart,
+      removeFromCart,
+      decreaseQuantity,
       user,
       setUser,
       logout,

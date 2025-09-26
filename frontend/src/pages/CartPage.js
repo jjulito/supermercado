@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
 
 export default function CartPage() {
-  const { cart, checkout } = useContext(StoreContext);
+  const { cart, checkout, removeFromCart, decreaseQuantity } = useContext(StoreContext);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -22,13 +22,61 @@ export default function CartPage() {
                     <h5 className="card-title">{product.title}</h5>
                     <p className="card-text">${product.price}</p>
                     <p className="card-text">Quantity: {product.quantity}</p>
+                    <div className="d-flex justify-content-between align-items-center mt-3">
+                      <div className="btn-group">
+                  
+                        <button 
+                          className="btn btn-outline-secondary btn-sm"
+                          onClick={() => decreaseQuantity(product.id)}
+                        >
+                          -
+                        </button>
+                        
+                    
+                        <button 
+                          className="btn btn-outline-danger btn-sm"
+                          onClick={() => removeFromCart(product.id)}
+                        >
+                          Remove
+                        </button>
+                        
+                       
+                        <button 
+                          className="btn btn-outline-secondary btn-sm"
+                          onClick={() => addToCart(product)}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+  
+                    <div className="mt-2">
+                      <strong>Subtotal: ${(product.price * product.quantity).toFixed(2)}</strong>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <h4>Total: ${total.toFixed(2)}</h4>
-          <button className="btn btn-success" onClick={checkout}>Checkout</button>
+          
+          <div className="mt-4 p-3 bg-light rounded">
+            <h4>Total: ${total.toFixed(2)}</h4>
+            <button className="btn btn-success me-2" onClick={checkout}>
+              Checkout
+            </button>
+          
+            <button 
+              className="btn btn-outline-danger" 
+              onClick={() => {
+                if (window.confirm('Are you sure you want to clear the cart?')) {
+                  setCart([]);
+                }
+              }}
+            >
+              Clear Cart
+            </button>
+          </div>
         </>
       )}
     </div>
