@@ -60,5 +60,3 @@ It fetches data from the public API [DummyJSON](https://dummyjson.com/products) 
 | `/products`                             | Returns all products from DummyJSON.          |
 | `/products/category/:category`          | Returns products filtered by category.        |
 
-
-📌 **URL del backend:**  
