@@ -1,14 +1,5 @@
 # 🛒 Supermercado
 
-![Frontend](https://img.shields.io/badge/Frontend-React-blue?style=flat&logo=react)
-![Backend](https://img.shields.io/badge/Backend-Node.js-green?style=flat&logo=node.js)
-![API](https://img.shields.io/badge/API-DummyJSON-yellow?style=flat)
-![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages%20%26%20Render-lightgrey?style=flat)
-
----
-
-## 🇪🇸 Descripción
-
 Este proyecto es una **aplicación web de e-commerce full-stack** desarrollada con **React** en el frontend y **Node.js + Express** en el backend.
 
 El backend está alojado en **Render** ([https://supermercado-w42d.onrender.com](https://supermercado-w42d.onrender.com)) y funciona como una API personalizada que sirve datos de productos.  
