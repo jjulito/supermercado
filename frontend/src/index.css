@@ -1,19 +1,148 @@
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
+  font-family: 'TASA Orbiter', sans-serif;
+  background-color: var(--ghost-white);
+  color: var(--graphite);
+}
+
+:root {
+  --deep-teal: #668586;
+  --light-green: #80ed99;
+  --graphite: #303036;
+  --ghost-white: #fffaff;
+  --powder-petal: #edd3c4;
 }
 
 .app-root {
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .main-content {
-  flex: 1 0 auto;         
+  flex: 1 0 auto;
 }
-
 
 footer {
   position: static !important;
+}
+
+/* Custom Component Styles */
+/* Custom Component Styles */
+.btn-custom {
+  background-color: var(--deep-teal) !important;
+  color: var(--ghost-white) !important;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--graphite) !important;
+  color: var(--light-green) !important;
+  transform: translateY(-2px);
+}
+
+.navbar-custom {
+  background-color: var(--deep-teal) !important;
+}
+
+.navbar-glass {
+  background: rgba(102, 133, 134, 0.85) !important;
+  /* Deep Teal with opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.footer-custom {
+  background-color: var(--graphite) !important;
+  color: var(--ghost-white) !important;
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  transform: translateY(-2px);
+  color: var(--light-green) !important;
+  text-shadow: 0 0 10px rgba(128, 237, 153, 0.5);
+}
+
+
+.product-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.product-card .card-title {
+  color: var(--deep-teal);
+  font-weight: bold;
+}
+
+.product-card .card-text {
+  color: var(--graphite);
+}
+
+/* Login Page Styles */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid var(--powder-petal);
+}
+
+/* Category Card Styles */
+.category-card {
+  transition: all 0.3s ease;
+  background-color: white;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--ghost-white);
+}
+
+.category-card h3 {
+  color: var(--deep-teal);
+  font-weight: bold;
+}
+
+/* Hero Section override if needed */
+.display-4 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }

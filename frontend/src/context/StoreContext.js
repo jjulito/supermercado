@@ -19,7 +19,11 @@ export const StoreProvider = ({ children }) => {
     });
   };
 
-   const decreaseQuantity = (productId) => {
+  const removeFromCart = (productId) => {
+    setCart((prevCart) => prevCart.filter(item => item.id !== productId));
+  };
+
+  const decreaseQuantity = (productId) => {
     setCart((prevCart) => {
       const index = prevCart.findIndex(item => item.id === productId);
       if (index !== -1) {

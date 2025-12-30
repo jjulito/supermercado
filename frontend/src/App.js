@@ -7,12 +7,14 @@ import ProductsPage from "./pages/ProductsPage";
 import LoginPage from "./pages/LoginPage";
 import CartPage from "./pages/CartPage";
 import { StoreProvider } from "./context/StoreContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function App() {
   return (
     <StoreProvider>
       <Router>
-        <div className="app-root">  
+        <div className="app-root">
           <NavBar />
           <main className="main-content">
             <Routes>
@@ -25,6 +27,7 @@ export default function App() {
             </Routes>
           </main>
           <Footer />
+          <ToastContainer position="bottom-right" autoClose={3000} />
         </div>
       </Router>
     </StoreProvider>

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-light py-3">
+    <footer className="footer-custom text-light py-3">
       <div className="container d-flex justify-content-between align-items-center">
-        <span>Creado por Julito</span>
+        <span>Created by Julito</span>
         <a
           href="https://github.com/jjulito"
           target="_blank"

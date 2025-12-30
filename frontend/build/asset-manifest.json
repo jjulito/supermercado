@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/supermercado/static/css/main.0f1a2ecd.css",
+    "main.js": "/supermercado/static/js/main.693ccea3.js",
+    "static/js/488.309093c5.chunk.js": "/supermercado/static/js/488.309093c5.chunk.js",
+    "index.html": "/supermercado/index.html",
+    "main.0f1a2ecd.css.map": "/supermercado/static/css/main.0f1a2ecd.css.map",
+    "main.693ccea3.js.map": "/supermercado/static/js/main.693ccea3.js.map",
+    "488.309093c5.chunk.js.map": "/supermercado/static/js/488.309093c5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f1a2ecd.css",
+    "static/js/main.693ccea3.js"
+  ]
+}

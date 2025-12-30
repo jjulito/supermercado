@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../context/StoreContext";
+import { ShoppingCart, User, Menu } from "lucide-react";
 
 export default function Navbar() {
   const { cart, user } = useContext(StoreContext);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-glass sticky-top shadow-sm">
       <div className="container">
         {/* Brand */}
         <Link className="navbar-brand fw-bold" to="/">
@@ -23,7 +24,7 @@ export default function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <Menu className="text-white" />
         </button>
 
         {/* Collapsible content */}
@@ -45,18 +46,26 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto align-items-center">
+
             {user && (
-              <li className="nav-item nav-link">Hello, {user.email}</li>
+              <li className="nav-item nav-link d-flex align-items-center">
+                <User size={20} className="me-1" />
+                Hello, {user.email}
+              </li>
             )}
+
             <li className="nav-item">
-              <Link className="nav-link" to="/cart">
+              <Link className="nav-link d-flex align-items-center" to="/cart">
+                <ShoppingCart size={20} className="me-1" />
                 Cart ({cart.length})
               </Link>
             </li>
+
             {!user && (
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link d-flex align-items-center" to="/login">
+                  <User size={20} className="me-1" />
                   Login
                 </Link>
               </li>
