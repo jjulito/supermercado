@@ -36,25 +36,8 @@ export default function ProductsPage({ category }) {
         setProducts(filtered);
       } catch (err) {
         console.error(err);
-        setProducts([
-          {
-            id: 1,
-            title: "Demo Product 1",
-            price: 19.99,
-            category: category,
-            thumbnail: "https://via.placeholder.com/150",
-            description: "Demo description"
-          },
-          {
-            id: 2,
-            title: "Demo Product 2",
-            price: 29.99,
-            category: category,
-            thumbnail: "https://via.placeholder.com/150",
-            description: "Demo description"
-          }
-        ]);
-        toast.error("API Error: Using demo data");
+        toast.error("Error fetching products. Please check your connection.");
+        setProducts([]);
       }
     }
 

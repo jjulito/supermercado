@@ -5,12 +5,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ruta principal
+// Main route
 app.get("/", (req, res) => {
   res.send("Backend Running with DummyJSON");
 });
 
-// Ruta de todos los productos
+// Products route
 app.get("/products", async (req, res) => {
   try {
     const response = await fetch("https://dummyjson.com/products");
@@ -23,7 +23,7 @@ app.get("/products", async (req, res) => {
   }
 });
 
-// Ruta de productos por categoría
+// Products by category route
 app.get("/products/category/:category", async (req, res) => {
   const category = req.params.category;
   try {
@@ -38,4 +38,4 @@ app.get("/products/category/:category", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
+app.listen(PORT, "127.0.0.1", () => console.log(`Backend running on port ${PORT}`));
