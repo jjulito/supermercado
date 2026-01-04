@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
 
 export default function CartPage() {
-  const { cart, checkout, removeFromCart, decreaseQuantity, addToCart, setCart } = useContext(StoreContext);
+  const { cart, checkout, removeFromCart, decreaseQuantity, addToCart, clearCart } = useContext(StoreContext);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
@@ -70,7 +70,7 @@ export default function CartPage() {
               className="btn btn-outline-danger"
               onClick={() => {
                 if (window.confirm('Are you sure you want to clear the cart?')) {
-                  setCart([]);
+                  clearCart();
                 }
               }}
             >

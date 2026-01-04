@@ -50,6 +50,10 @@ export const StoreProvider = ({ children }) => {
     setCart([]);
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <StoreContext.Provider value={{
       cart,
@@ -60,7 +64,8 @@ export const StoreProvider = ({ children }) => {
       setUser,
       logout,
       history,
-      checkout
+      checkout,
+      clearCart
     }}>
       {children}
     </StoreContext.Provider>
