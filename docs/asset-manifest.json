@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/supermercado/static/css/main.db879275.css",
-    "main.js": "/supermercado/static/js/main.ff53d285.js",
+    "main.js": "/supermercado/static/js/main.dc2c0f5e.js",
     "static/js/488.309093c5.chunk.js": "/supermercado/static/js/488.309093c5.chunk.js",
     "static/media/market_bg.jpg": "/supermercado/static/media/market_bg.af5fc2fa2f03bfc1b2dd.jpg",
     "index.html": "/supermercado/index.html",
     "main.db879275.css.map": "/supermercado/static/css/main.db879275.css.map",
-    "main.ff53d285.js.map": "/supermercado/static/js/main.ff53d285.js.map",
+    "main.dc2c0f5e.js.map": "/supermercado/static/js/main.dc2c0f5e.js.map",
     "488.309093c5.chunk.js.map": "/supermercado/static/js/488.309093c5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db879275.css",
-    "static/js/main.ff53d285.js"
+    "static/js/main.dc2c0f5e.js"
   ]
 }
