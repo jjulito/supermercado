@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../context/StoreContext";
+import { toast } from "react-toastify";
 
 export default function CartPage() {
   const { cart, checkout, removeFromCart, decreaseQuantity, addToCart, clearCart } = useContext(StoreContext);
@@ -69,9 +70,8 @@ export default function CartPage() {
             <button
               className="btn btn-outline-danger"
               onClick={() => {
-                if (window.confirm('Are you sure you want to clear the cart?')) {
-                  clearCart();
-                }
+                clearCart();
+                toast.info("Cart cleared");
               }}
             >
               Clear Cart

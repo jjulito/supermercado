@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build && (if exist ..\\docs rd /s /q ..\\docs) && move build ..\\docs",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test"
   },
   "browserslist": {
     "production": [

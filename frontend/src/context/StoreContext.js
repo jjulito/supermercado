@@ -51,7 +51,7 @@ export const StoreProvider = ({ children }) => {
   };
 
   const clearCart = () => {
-    setCart([]);
+    setCart(() => []);
   };
 
   return (
