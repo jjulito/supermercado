@@ -38,4 +38,4 @@ app.get("/products/category/:category", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, "127.0.0.1", () => console.log(`Backend running on port ${PORT}`));
+app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));

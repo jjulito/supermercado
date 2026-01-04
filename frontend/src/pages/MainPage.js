@@ -15,7 +15,7 @@ export default function MainPage() {
   useEffect(() => {
     const fetchFeatured = async () => {
       try {
-        const res = await fetch("http://localhost:5001/products?limit=0");
+        const res = await fetch("https://supermercado-w42d.onrender.com/products?limit=0");
         const data = await res.json();
 
         const shuffled = data.products.sort(() => 0.5 - Math.random());
@@ -118,9 +118,7 @@ export default function MainPage() {
         <div className="container">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h2 className="fw-bold mb-0">Featured Products</h2>
-            <Link to="/beauty" className="text-primary text-decoration-none d-flex align-items-center fw-bold">
-              View All <ArrowRight size={20} className="ms-1" />
-            </Link>
+
           </div>
           <div className="row">
             {featuredProducts.length === 0 ? (

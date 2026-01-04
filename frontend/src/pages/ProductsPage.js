@@ -14,7 +14,7 @@ export default function ProductsPage({ category }) {
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const res = await fetch("http://localhost:5001/products?limit=0");
+        const res = await fetch("https://supermercado-w42d.onrender.com/products?limit=0");
         const data = await res.json();
 
         let filtered = [];
